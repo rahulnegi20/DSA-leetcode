@@ -1,0 +1,18 @@
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        size = len(nums)
+        nums.sort()
+        store =0
+        if nums[0] != 0:
+            store = 0
+            return store
+        elif nums[size-1] != size :
+            store = size
+            return store
+        else:    
+            for i in range(size):
+                if nums[i] != i:
+                    store = i
+                    break
+                
+            return store        
